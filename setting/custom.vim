@@ -18,6 +18,11 @@
 let mapleader=','
 let g:mapleader=','
 
+"记住退出位置
+if has("autocmd")
+	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
 "开启语法高亮
 syntax on
 "NOTE: 以下配置有详细说明，一些特性不喜欢可以直接注解掉
@@ -39,3 +44,35 @@ filetype indent on
 " backspace 生效
 set backspace=eol,start,indent
 
+"ettings 文件编码,格式
+
+" 设置新文件的编码为 UTF-8
+set encoding=utf-8
+" 自动判断编码时，依次尝试以下编码：
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set helplang=cn
+
+
+" 自动换行缩进
+set autoindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+"行号  
+set number
+" 取消换行
+set nowrap
+" 括号配对情况, 跳转并高亮一下匹配的括号
+set showmatch
+
+"配色方案
+set background=dark
+set t_Co=256
+colorscheme gruvbox
+
+"------------------------------------------------------"
+"" 设置vim搜索匹配项的颜色
+hi Search cterm=NONE ctermfg=yellow ctermbg=NONE gui=NONE guifg=#FFFF00 guibg=NONE
+hi IncSearch cterm=NONE ctermfg=yellow ctermbg=NONE gui=NONE guifg=#FFFF00 guibg=NONE
+hi QuickFixLine cterm=NONE ctermfg=yellow ctermbg=NONE gui=NONE guifg=#FFFF00 guibg=NONE

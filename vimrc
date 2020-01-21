@@ -8,6 +8,7 @@ Plug 'ludovicchabant/vim-gutentags'  "gtags 管理插件
 Plug 'Shougo/defx.nvim'		"文件目录树 非nvim 需要如下三个插件
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'morhetz/gruvbox' "我喜欢的一个主题
 
 "初始化 插件管理器
 call plug#end()
