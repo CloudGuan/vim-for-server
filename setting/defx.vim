@@ -62,7 +62,7 @@ endfunction
 " in this function we should vim-choosewin if possible
 function! DefxSmartL(_)
     if defx#is_directory()
-        call defx#call_action('open_tree')
+        call defx#call_action('open_or_close_tree')
         normal! j
     else
         let filepath = defx#get_candidate()['action__path']
