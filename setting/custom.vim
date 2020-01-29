@@ -76,3 +76,12 @@ colorscheme gruvbox
 hi Search cterm=NONE ctermfg=yellow ctermbg=NONE gui=NONE guifg=#FFFF00 guibg=NONE
 hi IncSearch cterm=NONE ctermfg=yellow ctermbg=NONE gui=NONE guifg=#FFFF00 guibg=NONE
 hi QuickFixLine cterm=NONE ctermfg=yellow ctermbg=NONE gui=NONE guifg=#FFFF00 guibg=NONE
+
+" vim tab快捷键 Leader 快速切换tab 插入模式也要可以使用
+noremap <M-1> 1gt <cr>
+noremap <M-2> 2gt <cr>
+noremap <M-3> 3gt <cr>
+
+" 前一个 后一个 tab
+noremap <M-p> <esc> :tabp <cr>
+noremap <M-n> <esc> :tabn <cr> 
