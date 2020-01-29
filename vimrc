@@ -21,3 +21,4 @@ source ~/.vim/setting/custom.vim
 source ~/.vim/setting/defx.vim
 source ~/.vim/setting/gtags.vim
 source ~/.vim/setting/gutentags.vim
+source ~/.vim/setting/vimpreview.vim
