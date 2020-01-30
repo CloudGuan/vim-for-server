@@ -12,6 +12,8 @@ Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'sheerun/vim-polyglot'
 " YCM 
 Plug 'Valloric/YouCompleteMe', {'do':'./install.py --clang-completer --go-completer'}
+" golang
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 "注释的原因 Leaderf 有很强的功能了 可以代替这些插件
 "Plug 'ludovicchabant/vim-gutentags'  "gtags 管理插件
@@ -29,3 +31,4 @@ source ~/.vim/setting/defx.vim
 "source ~/.vim/setting/vimpreview.vim
 source ~/.vim/setting/leaderf.vim
 source ~/.vim/setting/ycm.vim
+source ~/.vim/setting/go-vim.vim
