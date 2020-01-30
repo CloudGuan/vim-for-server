@@ -38,8 +38,6 @@ set history=2000
 filetype on
 "load plugin with diff file type 
 filetype plugin on
-" 针对不同的文件类型采用不同的缩进格式
-filetype indent on
 
 " backspace 生效
 set backspace=eol,start,indent
@@ -55,9 +53,16 @@ set helplang=cn
 
 " 自动换行缩进
 set autoindent
+" 自适应不同语言的智能缩进
+filetype indent on
+" 将制表符扩展为空格
+set expandtab
+" 设置编辑时制表符占用空格数
 set tabstop=4
-set softtabstop=4
+" 设置格式化时制表符占用空格数
 set shiftwidth=4
+" 让 vim 把连续数量的空格视为一个制表符
+set softtabstop=4
 
 "行号  
 set number

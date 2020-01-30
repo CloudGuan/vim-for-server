@@ -9,6 +9,7 @@ fi
 
 cd ~/Downloads
 
+## 检测ctags 还有 gtags的安装
 if ! which ctags &>/dev/null; then
 	echo "ctags is not install"
 	git clone https://github.com/universal-ctags/ctags.git ctags
@@ -46,8 +47,16 @@ if ! which gtags &>/dev/null; then
 	cd ~/Downloads
 fi
 
-## 检测ctags 还有 gtags的安装
+## check golang YCM need golang
+if ! which go &>/dev/null; then
+    wget https://dl.google.com/go/go1.13.7.linux-amd64.tar.gz
+    tar -zxvf go1.13.7.linux-amd64.tar.gz
+    mv go /usr/local
+    cd ~/Downloads
+fi
 
+## YCM 依赖检查 cmake3 python3-dev build-essential 
+apt install build-essential cmake python3-dev
 
 ## defx目录树环境
-#pip3 install --user pynvim
+pip3 install --user pynvim
